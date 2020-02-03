@@ -41,7 +41,7 @@ table {
   justify-content: center;
 }
 
-footer {
+/* footer {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -50,4 +50,4 @@ footer {
   width: 100%;
   background-color: black;
   color: white;
-}
+} */
