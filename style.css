@@ -1,0 +1,53 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  display: flexbox;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  background-color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+header {
+  /* display: flex; */
+  background-color: darkgray;
+}
+
+#hero-image {
+  /* position: absolute; */
+  width: 100%;
+  /* display: flex; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://media.giphy.com/media/l41lZBP84rdzHnWA8/giphy.gif");
+}
+
+#hero-text {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 50px;
+  font-family: "Raleway", sans-serif;
+  padding: 5px auto;
+  margin: auto;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 10%;
+  overflow: hidden;
+  width: 100%;
+  background-color: black;
+  color: white;
+}

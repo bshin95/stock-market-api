@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Stock Market Tracker</title>
+  </head>
+  <body>
+    <header>
+      <div id="hero-image">
+        <div id="hero-text">
+          <h1>Stock Market Tracker</h1>
+          <p>Get real-time data on stocks!</p>
+        </div>
+      </div>
+      <!-- <h1>Stock Market Tracker</h1>
+      <div> -->
+        <!-- <nav>
+          <a href="#pic-section">Market News</a>
+          <a href="#vid-section">Videos</a>
+        </nav> -->
+      <!-- </div> -->
+    </header>
+    <main>
+      <form>
+        <input id="search"></input>
+        <button id="searchButton">Look up Stock</button>
+      </form>
+    </main>
+    <section id="stock-quote">
+      <h1>Stock Quote</h1>
+      <p>15-minute delayed data</p>
+    </section>
+    <table>
+      <tr>
+        <th>Company Name</th>
+        <th>Stock Price</th>
+        <th>Price Change</th>
+        <th>Percent Change</th>
+        <th>Market Cap</th>
+      </tr>
+      <tr classs="stockList">
+        <td id=company></td>
+        <td id=symbol></td>
+        <td id=price></td>
+        <td id=dollarChange></td>
+        <td id=percentChange></td>
+        <td id=marketCap></td>
+      </tr>
+    </table>
+    <script src="main.js"></script>
+  </body>
+  <footer><a href="https://iexcloud.io">Data provided by IEX Cloud</a>
+    <p>Created by Bryan &copy; Mandolorians 2020</p>
+  </footer>
+</html>
