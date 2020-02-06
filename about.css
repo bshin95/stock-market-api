@@ -1,0 +1,41 @@
+body {
+  display: flexbox;
+  flex-direction: row;
+  height: 100%;
+  background-color: white;
+  font-family: "Raleway", sans-serif;
+  justify-content: center;
+  text-align: center;
+}
+
+header {
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  justify-content: space-between;
+}
+
+hr.solid {
+  border-top: 3px solid black;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  filter: brightness(50%);
+}
+
+#slideshow {
+  display: flex;
+  justify-content: center;
+  /* position: absolute; */
+  max-width: 100%;
+  width: 100%;
+  height: 100px;
+  max-height: 50%;
+}

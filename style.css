@@ -5,12 +5,12 @@ html {
 
 body {
   display: flexbox;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+  flex-direction: row;
   height: 100%;
   background-color: white;
   font-family: "Raleway", sans-serif;
+  justify-content: center;
+  text-align: center;
 }
 
 header {
@@ -22,7 +22,7 @@ header {
   /* position: absolute; */
   width: 100%;
   /* display: flex; */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("https://media.giphy.com/media/l41lZBP84rdzHnWA8/giphy.gif");
 }
 
@@ -36,10 +36,90 @@ header {
   margin: auto;
 }
 
-table {
+/* nav {
+  flex-direction: column;
+} */
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+  justify-content: space-between;
+}
+
+form {
   display: flex;
   justify-content: center;
+  margin: 20px 0;
 }
+
+input {
+  margin: 10px 0;
+  padding: 15px 70px;
+  font-size: 30px;
+  text-align: center;
+}
+
+button {
+  margin: 10px 5px;
+  color: white;
+  background-color: rgba(30, 144, 255, 1);
+  border-radius: 4px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #4caf50;
+  color: white;
+}
+
+#container {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.col {
+  flex: 1;
+}
+
+/* #col {
+  flex: 1;
+} */
+
+/* .divider {
+  width: 2px;
+  margin: 6px 0;
+  background: black;
+} */
+
+#stock-quote {
+  /* border: 5px solid black;
+  border-width: thin; */
+  /* flex-direction: column; */
+  display: flex;
+  flex-direction: row;
+}
+
+#stockList {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#stock-chart {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+hr.solid {
+  border-top: 3px solid black;
+}
+
+/* #stock-news {
+  display: flex;
+} */
 
 /* footer {
   position: absolute;

@@ -17,6 +17,7 @@
           <p>Get real-time data on stocks!</p>
         </div>
       </div>
+      
       <!-- <h1>Stock Market Tracker</h1>
       <div> -->
         <!-- <nav>
@@ -25,19 +26,188 @@
         </nav> -->
       <!-- </div> -->
     </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="aboutus.html">About</a></li>
+      </ul>
+    </nav>
+    <hr class="solid">
     <main>
       <form>
         <input id="search"></input>
-        <button id="searchButton">Look up Stock</button>
+        <button id="searchButton" class="button"><span>Look up Stock</span></button>
       </form>
-    </main>
-    <section id="stock-quote">
-      <h1>Stock Quote</h1>
-      <p>15-minute delayed data</p>
-    </section>
-    <div class="stockList">
-      
+    <div id="container">
+      <!-- TradingView Widget BEGIN -->
+<div id="col" class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Market Data</span></a> by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+  {
+  "colorTheme": "light",
+  "dateRange": "12m",
+  "showChart": true,
+  "locale": "en",
+  "largeChartUrl": "",
+  "isTransparent": false,
+  "width": "400",
+  "height": "660",
+  "plotLineColorGrowing": "rgba(33, 150, 243, 1)",
+  "plotLineColorFalling": "rgba(33, 150, 243, 1)",
+  "gridLineColor": "rgba(233, 233, 234, 1)",
+  "scaleFontColor": "rgba(120, 123, 134, 1)",
+  "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
+  "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+  "symbolActiveColor": "rgba(33, 150, 243, 0.12)",
+  "tabs": [
+    {
+      "title": "Indices",
+      "symbols": [
+        {
+          "s": "OANDA:SPX500USD",
+          "d": "S&P 500"
+        },
+        {
+          "s": "OANDA:NAS100USD",
+          "d": "Nasdaq 100"
+        },
+        {
+          "s": "FOREXCOM:DJI",
+          "d": "Dow 30"
+        },
+        {
+          "s": "INDEX:NKY",
+          "d": "Nikkei 225"
+        },
+        {
+          "s": "INDEX:DEU30",
+          "d": "DAX Index"
+        },
+        {
+          "s": "OANDA:UK100GBP",
+          "d": "FTSE 100"
+        }
+      ],
+      "originalTitle": "Indices"
+    },
+    {
+      "title": "Commodities",
+      "symbols": [
+        {
+          "s": "CME_MINI:ES1!",
+          "d": "E-Mini S&P"
+        },
+        {
+          "s": "CME:6E1!",
+          "d": "Euro"
+        },
+        {
+          "s": "COMEX:GC1!",
+          "d": "Gold"
+        },
+        {
+          "s": "NYMEX:CL1!",
+          "d": "Crude Oil"
+        },
+        {
+          "s": "NYMEX:NG1!",
+          "d": "Natural Gas"
+        },
+        {
+          "s": "CBOT:ZC1!",
+          "d": "Corn"
+        }
+      ],
+      "originalTitle": "Commodities"
+    },
+    {
+      "title": "Bonds",
+      "symbols": [
+        {
+          "s": "CME:GE1!",
+          "d": "Eurodollar"
+        },
+        {
+          "s": "CBOT:ZB1!",
+          "d": "T-Bond"
+        },
+        {
+          "s": "CBOT:UB1!",
+          "d": "Ultra T-Bond"
+        },
+        {
+          "s": "EUREX:FGBL1!",
+          "d": "Euro Bund"
+        },
+        {
+          "s": "EUREX:FBTP1!",
+          "d": "Euro BTP"
+        },
+        {
+          "s": "EUREX:FGBM1!",
+          "d": "Euro BOBL"
+        }
+      ],
+      "originalTitle": "Bonds"
+    },
+    {
+      "title": "Forex",
+      "symbols": [
+        {
+          "s": "FX:EURUSD"
+        },
+        {
+          "s": "FX:GBPUSD"
+        },
+        {
+          "s": "FX:USDJPY"
+        },
+        {
+          "s": "FX:USDCHF"
+        },
+        {
+          "s": "FX:AUDUSD"
+        },
+        {
+          "s": "FX:USDCAD"
+        }
+      ],
+      "originalTitle": "Forex"
+    }
+  ]
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+      <section class="col" id="stock-quote">
+        <!-- <h1>Stock Quote</h1> -->
+      <!-- <p>15-minute delayed data</p> -->
+    <!-- </section>
+    <section id="stock-section"> -->
+        <section class="col" id="stockList">
+          <h1>Stock Quote</h1>
+          <p>Search any stock listed on the New York Stock Exchange<br> or the NASDAQ Stock Exchange!  <br><br>After looking up the stock, you will have information on:
+            <br><br>- Stock price
+            <br>- Stock ticker
+            <br>- Intra dollar and percentage change
+            <br>- Market Cap
+            <br>- Company News
+            <br><br>*15 minute delayed price
+          </p>
+        </section>
+        <div class="divider"></div>
+      </section>
+      <section class="col" id="stock-chart">
+        <img src="https://www.perkinselearning.org/sites/elearning.perkinsdev1.org/files/styles/interior_page_image__519x374_/public/Amazon_2.png?itok=tTCYFav3"/>
+      </section>
     </div>
+    <h1>Stock News</h1>
+    <hr class="solid">
+    <section class="col" id="stockNews">
+    </section>
+  </main>
     <script src="main.js"></script>
   </body>
   <footer><a href="https://iexcloud.io">Data provided by IEX Cloud</a>
