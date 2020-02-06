@@ -5,6 +5,7 @@ const stockInput = document.querySelector("#search");
 const stockList = document.querySelector("#stockList");
 
 const stockNews = document.querySelector("#stockNews");
+const stockChart = document.querySelector("#stock-chart");
 // const newsTab = document.querySelector("#news-tab")
 
 let searchStock = stock => {
@@ -19,9 +20,9 @@ let searchStock = stock => {
   companyPrice.textContent = `Price: $${stock.latestPrice}`;
   let dollarChange = document.createElement("p");
   let dChange = (dollarChange.textContent = `Change: $${stock.change}`);
-  // if (dChange > 1) {
+  // if (dChange > 0) {
   //   dChange.style.color = "green";
-  // } else if (dChange < 1) {
+  // } else if (dChange < 0) {
   //   dChange.style.color = "red";
   // } else {
   //   dChange.style.color = "black";
@@ -36,8 +37,15 @@ let searchStock = stock => {
   // } else {
   //   pChange.style.color = "black";
   // }
+
+  const formatter = Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    minimumFractionDigits: 2
+  });
   let stockCap = document.createElement("p");
-  stockCap.textContent = `$${stock.marketCap}`;
+  stockCap.textContent = "Market Cap: " + formatter.format(stock.marketCap);
+
   // let stockNews = document.createElement("p");
   // stockNews.textContent = `${stock.};`
   stockList.append(companyName);
@@ -66,10 +74,36 @@ let searchNews = stock => {
     stockNews.append(companyNews);
     stockNews.append(newImage);
     stockNews.append(newSource);
-    stockNews.append(newUrl);
+    // stockNews.append(newUrl);
     stockNews.append(newsSum);
   }
 };
+
+const parseApiData = () => {
+  let cols = [];
+  for (let i = 0; i < chart.length; i++) {
+    const data = chart[i];
+    console.log(data);
+
+    cols.push([data.label, data.low, data.high]);
+  }
+  console.log(cols);
+};
+
+// const drawChart = () => {
+//   let data = google.visualization.arrayToDataTable(
+//     [[data.label, data.low, data.high]],
+//     true
+//   );
+//   let options = {
+//     legend: "none"
+//   };
+//   let chart = new google.visualization.CandlestickChart(
+//     document.getElementsByClassName("stock-chart")
+//   );
+
+//   chart.draw(data, options);
+// };
 
 button.addEventListener("click", async evt => {
   evt.preventDefault();
@@ -78,40 +112,6 @@ button.addEventListener("click", async evt => {
   );
   searchStock(response.data.quote);
   searchNews(response.data.news);
+  parseApiData(response.data.chart);
+  // drawChart(response.data.chart);
 });
-
-// let stocks = (stockList.innerHTML += `<div>
-// <h1>${stockName}<h1>
-// <p>Symbol: ${stockSymbol}</p>
-// <p>Price: ${stockPrice}</p>
-// </div>`);
-// let stockTable = q(stockList.innerHTML += `
-//     <tr>
-//       <td>${stockName}</td>
-//       <td>${stockSymbol}</td>
-//       <td>${stockPrice}</td>
-//       <td>${stockChange}</td>
-//       <td>${stockPerChange}</td>
-//       <td>${stockCap}</td>
-//     </tr>`);
-
-// console.log("button clicked", response);
-
-// for (let i = 0; i < response.data.quote.length; i++) {
-// let stockName = response.data.quote.companyName[i];
-// let stockSymbol = response.data.quote.symbol[i];
-// let stockPrice = response.data.quote.latestPrice[i]; //attribution href
-// let stockChange = response.data.quote.change[i];
-// let stockPerChange = response.data.quote.changePercent[i];
-// let stockCap = response.data.quote.marketCap[i];
-
-// let stockTable = (stockList.innerHTML += `
-//   <tr>
-//     <td>${stockName}</td>
-//     <td>${stockSymbol}</td>
-//     <td>${stockPrice}</td>
-//     <td>${stockChange}</td>
-//     <td>${stockPerChange}</td>
-//     <td>${stockCap}</td>
-//   </tr>`);
-// }

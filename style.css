@@ -1,6 +1,6 @@
 html {
   min-height: 100%;
-  position: relative;
+  max-width: 100%;
 }
 
 body {
@@ -11,6 +11,9 @@ body {
   font-family: "Raleway", sans-serif;
   justify-content: center;
   text-align: center;
+  margin: 0;
+  width: 100%;
+  /* width: auto; */
 }
 
 header {
@@ -30,7 +33,7 @@ header {
   display: flex;
   flex-direction: column;
   color: white;
-  font-size: 50px;
+  font-size: 3em;
   font-family: "Raleway", sans-serif;
   padding: 5px auto;
   margin: auto;
@@ -56,9 +59,11 @@ form {
 
 input {
   margin: 10px 0;
-  padding: 15px 70px;
-  font-size: 30px;
+  padding: 0px 0px;
+  font-size: 10px;
   text-align: center;
+  border-left: 6px solid rgba(30, 144, 255, 1);
+  background-color: lightgrey;
 }
 
 button {
@@ -108,13 +113,33 @@ button {
   text-align: center;
 }
 
-#stock-chart {
+#stockNews {
+  text-align: center;
+  /* width: 75%; */
+}
+
+/* #stock-chart {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-}
+} */
 hr.solid {
   border-top: 3px solid black;
+}
+
+@media (max-width: 768px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* #stockNews {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+  } */
 }
 
 /* #stock-news {
