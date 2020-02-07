@@ -17,22 +17,16 @@
           <p>Get real-time data on stocks!</p>
         </div>
       </div>
-      
-      <!-- <h1>Stock Market Tracker</h1>
-      <div> -->
-        <!-- <nav>
-          <a href="#pic-section">Market News</a>
-          <a href="#vid-section">Videos</a>
-        </nav> -->
-      <!-- </div> -->
     </header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="news.html">News</a></li>
-        <li><a href="aboutus.html">About</a></li>
-      </ul>
-    </nav>
+    <div class="tabs"></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="aboutus.html">About</a></li>
+        </ul>
+     </nav>
+   </div>
     <hr class="solid">
     <main>
       <form>
@@ -41,7 +35,8 @@
       </form>
     <div id="container">
       <!-- TradingView Widget BEGIN -->
-<div id="col" class="tradingview-widget-container">
+<div class="trading-view-chart">
+<div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
   <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">Market Data</span></a> by TradingView</div>
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
@@ -52,7 +47,7 @@
   "locale": "en",
   "largeChartUrl": "",
   "isTransparent": false,
-  "width": "400",
+  "width": "90%",
   "height": "660",
   "plotLineColorGrowing": "rgba(33, 150, 243, 1)",
   "plotLineColorFalling": "rgba(33, 150, 243, 1)",
@@ -180,13 +175,11 @@
 }
   </script>
 </div>
+</div>
 <!-- TradingView Widget END -->
-      <section id="stock-quote">
-        <!-- <h1>Stock Quote</h1> -->
-      <!-- <p>15-minute delayed data</p> -->
-    <!-- </section>
-    <section id="stock-section"> -->
-        <section id="stockList">
+<div class="stock-list">
+      <section id="stockList">
+        <section id="stock-quote">
           <h1>Stock Quote</h1>
           <p>Search any stock listed on the New York Stock Exchange<br> or the NASDAQ Stock Exchange!  <br><br>After looking up the stock, you will have information on:
             <br><br>- Stock price
@@ -197,7 +190,7 @@
             <br><br>*15 minute delayed price
           </p>
         </section>
-        <div class="divider"></div>
+      </div>
       </section>
       <section class="col" id="stock-chart">
       </section>
@@ -207,8 +200,8 @@
     <section id="stockNews">
     </section>
   </main>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="main.js"></script>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   </body>
   <hr class="solid">
   <footer><a href="https://iexcloud.io">Data provided by IEX Cloud</a>

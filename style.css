@@ -13,18 +13,20 @@ body {
   text-align: center;
   margin: 0;
   width: 100%;
-  /* width: auto; */
+}
+
+.tabs {
+  padding: 5px;
+  text-align: center;
 }
 
 header {
-  /* display: flex; */
   background-color: darkgray;
+  overflow: hidden;
 }
 
 #hero-image {
-  /* position: absolute; */
   width: 100%;
-  /* display: flex; */
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("https://media.giphy.com/media/l41lZBP84rdzHnWA8/giphy.gif");
 }
@@ -37,11 +39,14 @@ header {
   font-family: "Raleway", sans-serif;
   padding: 5px auto;
   margin: auto;
+  word-wrap: break-word;
 }
 
-/* nav {
-  flex-direction: column;
-} */
+#stock-list {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
 
 li {
   list-style-type: none;
@@ -83,29 +88,26 @@ button {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
+  width: 100%;
 }
 
-.col {
-  flex: 1;
+.trading-view-chart {
+  width: 30%;
 }
 
-/* #col {
-  flex: 1;
-} */
+.stock-list {
+  width: 30%;
+}
 
-/* .divider {
-  width: 2px;
-  margin: 6px 0;
-  background: black;
-} */
+.stockChartSection {
+  width: 30%;
+}
 
-#stock-quote {
-  /* border: 5px solid black;
-  border-width: thin; */
-  /* flex-direction: column; */
+/* #stock-quote {
   display: flex;
   flex-direction: row;
-}
+  text-align: center;
+} */
 
 #stockList {
   display: flex;
@@ -113,16 +115,14 @@ button {
   text-align: center;
 }
 
-#stockNews {
-  text-align: center;
-  /* width: 75%; */
+.sourceUrl {
+  word-wrap: break-word;
 }
 
-/* #stock-chart {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-} */
+#stockNews {
+  text-align: center;
+}
+
 hr.solid {
   border-top: 3px solid black;
 }
@@ -131,28 +131,29 @@ hr.solid {
   #container {
     display: flex;
     flex-direction: column;
+    width: 100%;
+  }
+  .trading-view-chart {
     justify-content: center;
+    display: flex;
     width: 100%;
   }
 
-  /* #stockNews {
+  .stock-list {
+    justify-content: center;
     display: flex;
-    flex-direction: column;
-    width: 75%;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* .stock-chart {
+    display: flex;
+    justify-content: center;
   } */
+
+  .stockChartSection {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+  }
 }
-
-/* #stock-news {
-  display: flex;
-} */
-
-/* footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 10%;
-  overflow: hidden;
-  width: 100%;
-  background-color: black;
-  color: white;
-} */
