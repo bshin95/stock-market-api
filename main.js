@@ -87,7 +87,6 @@ const parseApiData = chart => {
 
 const drawChart = chartData => {
   const cols = parseApiData(chartData);
-  console.log(cols);
   let data = google.visualization.arrayToDataTable(cols, true);
   let options = {
     legend: "none"
