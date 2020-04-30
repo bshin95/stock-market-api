@@ -121,6 +121,7 @@ button {
 
 #stockNews {
   text-align: center;
+  padding: 0 5rem;
 }
 
 hr.solid {
@@ -145,11 +146,6 @@ hr.solid {
     text-align: center;
     width: 100%;
   }
-
-  /* .stock-chart {
-    display: flex;
-    justify-content: center;
-  } */
 
   .stockChartSection {
     justify-content: center;
